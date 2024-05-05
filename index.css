@@ -1,0 +1,35 @@
+header {
+    width: 100%;
+    position: absolute;
+    top: 0; /* Position it at the top */
+}
+html{    overflow: auto;
+}
+
+.aboveAll {
+    display: flex;
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers children horizontally */
+    justify-content: center; /* Centers children vertically if there's extra space */
+    width: 100%; /* Takes full width of its parent */
+    padding: 20px; /* Optional: adds padding inside .aboveAll */
+}
+
+.container, #ticketsScroller {
+    width: 100%; /* Ensures both divs take full width of their parent */
+    margin-bottom: 20px; /* Adds space between the container and the tickets scroller */
+}
+
+/* Specific styling for the ticketsScroller to ensure it scrolls horizontally */
+#ticketsScroller {
+    overflow-x: auto;
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.ticket { /* Assuming each ticket has a class .ticket */
+    flex: 0 0 auto; /* Do not grow or shrink, respect content width */
+    width: 300px; /* Adjust width as necessary */
+    /* Additional styles for tickets */
+}

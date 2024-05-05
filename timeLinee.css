@@ -1,0 +1,217 @@
+.grey_light-block {
+  background-color: #000000;
+ 
+}
+.timeline .point .bocata {
+  margin: 5px 0;  /* Reduce margin to fit small spaces */
+  padding: 5px;  /* Reduce padding */
+  font-size: 0.8rem;  /* Reduce font size for space */
+}
+
+.aboveAll {
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+  background-color: #f7f7f7;  /* Optional: background color */
+}
+
+
+
+.container {
+  max-width: 1200px;        /* Maximum width of the timeline */
+  margin: 0 auto;           /* Centering the timeline horizontally */
+  position: relative;       /* Position relative for absolute children */
+  padding: 20px;            /* Padding inside the container */
+  background-image: linear-gradient(to bottom, #930054, #983279, #97519b, #926db8, #8b87d0, #7096df, #4ca4e9, #00b1ec, #00b6db, #00b7b2, #00b376, #2aab29);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25); /* Box shadow for styling */
+  border-radius: 8px;       /* Rounded corners */
+}
+
+/* Maintain existing styles for .timeline and children */
+
+.timeline {
+  position: relative;
+  background-image: linear-gradient(to bottom, #930054, #983279, #97519b, #926db8, #8b87d0, #7096df, #4ca4e9, #00b1ec, #00b6db, #00b7b2, #00b376, #2aab29);
+  width: 50px;
+  text-align: center;
+  transition: all 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .timeline {
+    margin: 0 0 0 20px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .timeline {
+    margin: 0 auto;
+  }
+}
+.timeline .point .year {
+  padding-top: 10px;
+  color: #ffffff;
+}
+.timeline .point .bocata {
+  position: relative;
+  background-color: #ffffff;
+  padding: 20px;
+  transition: all 0.3s;
+}
+@media screen and (max-width: 425px) {
+  .timeline .point .bocata {
+    width: 180px;
+  }
+  .timeline .point .bocata.little {
+    width: 180px;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 576px) {
+  .timeline .point .bocata {
+    width: 250px;
+  }
+  .timeline .point .bocata.little {
+    width: 250px;
+  }
+}
+@media screen and (min-width: 577px) {
+  .timeline .point .bocata {
+    width: 400px;
+  }
+  .timeline .point .bocata.little {
+    width: 250px;
+  }
+}
+.timeline .point .bocata + .bocata {
+  margin-top: 35px;
+}
+.timeline .point:nth-child(odd) .bocata {
+  box-shadow: -6px 10px 20px -20px #4a4a4a;
+  left: 100px;
+  position: relative;
+  z-index: 10;
+}
+.timeline .point:nth-child(odd) .bocata::after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  z-index: 10;
+  border: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  margin-top: -10px;
+  top: 50%;
+  border-right: 10px solid #ffffff;
+  left: -10px;
+}
+.timeline .point:nth-child(even) .bocata {
+  box-shadow: 6px 10px 20px -20px #4a4a4a;
+}
+@media screen and (max-width: 768px) {
+  .timeline .point:nth-child(even) .bocata {
+    left: 100px;
+    position: relative;
+    z-index: 10;
+  }
+  .timeline .point:nth-child(even) .bocata::after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    margin-top: -10px;
+    top: 50%;
+    border-right: 10px solid #ffffff;
+    left: -10px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .timeline .point:nth-child(even) .bocata {
+    right: 425px;
+    position: relative;
+    z-index: 10;
+  }
+}
+@media screen and (min-width: 769px) and (min-width: 769px) {
+  .timeline .point:nth-child(even) .bocata.little {
+    right: 275px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .timeline .point:nth-child(even) .bocata::after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    margin-top: -10px;
+    top: 50%;
+    border-left: 10px solid #ffffff;
+    left: auto;
+    right: -10px;
+  }
+}
+.timeline .point .arrow {
+  border: solid #f7f7f7;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 20px;
+  transform: rotate(45deg);
+}
+.timeline .point:first-child .arrow, .timeline .point:last-child .arrow {
+  border: solid #f7f7f7;
+  border-width: 0 12px 12px 0;
+  display: inline-block;
+  padding: 20px;
+  transform: rotate(45deg);
+}
+.timeline .point .arrow-clean {
+  border: solid #f7f7f7;
+  border-width: 0 20px 20px 0;
+  display: inline-block;
+  padding: 20px;
+  position: absolute;
+  left: -5px;
+  bottom: -13px;
+  transform: rotate(45deg);
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1.28px;
+}.timeline-body {
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+.point {
+    margin-bottom: 10px;
+}
+.point .bocata {
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.point .year {
+    font-weight: bold;
+    color: #333;
+}
+.point .bocata .row {
+    display: flex;
+    justify-content: space-between;
+}
+.point .bocata .col-md-6 {
+    flex: 0 0 48%;
+    max-width: 48%;
+}

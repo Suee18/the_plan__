@@ -1,0 +1,53 @@
+/* Basic reset for links */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    background-color: rgb(10, 10, 71);
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.nav-link {
+    padding: 10px 15px;
+    margin-right: 5px;
+    background-color: rgb(11, 12, 78); /* Black background for individual links */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Hover effect for links */
+.nav-link:hover, .dropdown:hover .nav-link {
+    background-color: lightblue; /* Change to light blue on hover */
+}
+
+/* Dropdown container - styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    box-shadow: 0px 8prgb(161, 161, 161)x 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: lightblue;
+}
