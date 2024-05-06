@@ -1,37 +1,19 @@
 .grey_light-block {
-  background-color: #000000;
- 
-}
-.timeline .point .bocata {
-  margin: 5px 0;  /* Reduce margin to fit small spaces */
-  padding: 5px;  /* Reduce padding */
-  font-size: 0.8rem;  /* Reduce font size for space */
+  background-color: #ffffff00;
 }
 
 .aboveAll {
+  margin-top: 50rem;
   display: flex;
-  justify-content: center;  /* Center horizontally */
-  align-items: center;      /* Center vertically */
-  background-color: #f7f7f7;  /* Optional: background color */
+  flex-direction: column;
+  height: 50vh;
+  width: 30%;
+  margin-left: 35%;  
 }
-
-
-
-.container {
-  max-width: 1200px;        /* Maximum width of the timeline */
-  margin: 0 auto;           /* Centering the timeline horizontally */
-  position: relative;       /* Position relative for absolute children */
-  padding: 20px;            /* Padding inside the container */
-  background-image: linear-gradient(to bottom, #930054, #983279, #97519b, #926db8, #8b87d0, #7096df, #4ca4e9, #00b1ec, #00b6db, #00b7b2, #00b376, #2aab29);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.25); /* Box shadow for styling */
-  border-radius: 8px;       /* Rounded corners */
-}
-
-/* Maintain existing styles for .timeline and children */
-
 .timeline {
   position: relative;
-  background-image: linear-gradient(to bottom, #930054, #983279, #97519b, #926db8, #8b87d0, #7096df, #4ca4e9, #00b1ec, #00b6db, #00b7b2, #00b376, #2aab29);
+  /* background-image: linear-gradient(to bottom, #d0df7b, #a5a325, #bcd820, #b6b31e, #c55f30, #ff7e33, #d3560d, #f04f0f, #1427cf, #2a169c, #1f0c66, #020318); */
+   background-image: linear-gradient(to bottom, #03d9ff, #1fa9ad, #50aae6, #58a9eb, #758aeb, #3f7af8, #0061e0, #003fb4, #1427cf, #2a169c, #1f0c66, #090e68); 
   width: 50px;
   text-align: center;
   transition: all 0.3s;
@@ -46,13 +28,15 @@
     margin: 0 auto;
   }
 }
+/* the hour on the line  */
 .timeline .point .year {
   padding-top: 10px;
-  color: #ffffff;
+  color: #f1e7e7;
 }
 .timeline .point .bocata {
   position: relative;
-  background-color: #ffffff;
+  background-color: #ffffffb4; /*the color of the boxes*/
+  border-radius: 10px;
   padding: 20px;
   transition: all 0.3s;
 }
@@ -101,17 +85,23 @@
   border-bottom: 10px solid transparent;
   margin-top: -10px;
   top: 50%;
-  border-right: 10px solid #ffffff;
+  border-right: 10px solid #e2c0c0c9;  /*the color of the pop msg  */
   left: -10px;
 }
+/* left boxes  */
 .timeline .point:nth-child(even) .bocata {
-  box-shadow: 6px 10px 20px -20px #4a4a4a;
+  box-shadow: 6px 10px 20px -20px #4a4a4a;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 @media screen and (max-width: 768px) {
   .timeline .point:nth-child(even) .bocata {
     left: 100px;
     position: relative;
     z-index: 10;
+    
   }
   .timeline .point:nth-child(even) .bocata::after {
     content: "";
@@ -160,21 +150,21 @@
   }
 }
 .timeline .point .arrow {
-  border: solid #f7f7f7;
+  border: solid #e4e4e4; /*the color of the arrow */
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 20px;
   transform: rotate(45deg);
 }
 .timeline .point:first-child .arrow, .timeline .point:last-child .arrow {
-  border: solid #f7f7f7;
+  border: solid #f1f1f1; /*the color of the bottom arrow */
   border-width: 0 12px 12px 0;
   display: inline-block;
   padding: 20px;
   transform: rotate(45deg);
 }
 .timeline .point .arrow-clean {
-  border: solid #f7f7f7;
+  border: solid #ffffff; /*the color of the bottom arrow */
   border-width: 0 20px 20px 0;
   display: inline-block;
   padding: 20px;
@@ -188,10 +178,12 @@
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 1.28px;
+  color: #042d6b; /*the color of the title of each paragraph  */
 }.timeline-body {
-    width: 100%;
+    width: 20%;
+    margin-left: 30%;
     padding: 10px;
-    background: #fff;
+    background: #dbd8d8;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.25);
 }
@@ -205,11 +197,12 @@
 }
 .point .year {
     font-weight: bold;
-    color: #333;
+    color: #ffffff;
 }
 .point .bocata .row {
     display: flex;
     justify-content: space-between;
+    
 }
 .point .bocata .col-md-6 {
     flex: 0 0 48%;
